@@ -1,0 +1,190 @@
+Sender: LSF System <lsfadmin@dg-p100>
+Subject: Job 72158090: <cifarclass> in cluster <chimera> Done
+
+Job <cifarclass> was submitted from host <li03c03> by user <vanvok01> in cluster <chimera> at Thu Sep 22 14:44:31 2022
+Job was executed on host(s) <dg-p100>, in queue <gpu>, as user <vanvok01> in cluster <chimera> at Thu Sep 22 14:44:32 2022
+</hpc/users/vanvok01> was used as the home directory.
+</hpc/users/vanvok01> was used as the working directory.
+Started at Thu Sep 22 14:44:32 2022
+Terminated at Thu Sep 22 17:52:12 2022
+Results reported at Thu Sep 22 17:52:12 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J cifarclass
+#BSUB -P acc_shenl03_ml
+#BSUB -q gpu
+#BSUB -n 1
+#BSUB -R rusage[mem=8000]
+#BSUB -W 04:00
+#BSUB -o %J.stdout
+#BSUB -eo %J.stderr
+
+ml python
+python cifar_with_tuning-Copy3.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   12484.00 sec.
+    Max Memory :                                 2335 MB
+    Average Memory :                             2023.22 MB
+    Total Requested Memory :                     8000.00 MB
+    Delta Memory :                               5665.00 MB
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                34
+    Run time :                                   11260 sec.
+    Turnaround time :                            11261 sec.
+
+The output (if any) follows:
+
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Finished Training
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Files already downloaded and verified
+Accuracy: 0.8444
+Best hyperparameters: {'lr': 0.0011974491368589326, 'batch_size': 7}
+Best epoch: {'Epoch': 24}
+     value  params_batch_size  params_lr  user_attrs_Epoch
+0   0.6866                  9   0.063535                19
+1   0.5666                 11   0.070332                23
+2   0.7354                  6   0.026497                 9
+3   0.8046                  6   0.000185                24
+4   0.7840                  9   0.000274                21
+..     ...                ...        ...               ...
+95  0.5970                  8   0.000851                 0
+96  0.7392                  7   0.001479                 2
+97  0.5332                  8   0.002720                 0
+98  0.6096                  7   0.000577                 0
+99  0.7106                  7   0.000742                 1
+
+[100 rows x 4 columns]
+
+
+PS:
+
+Read file <72158090.stderr> for stderr output of this job.
+

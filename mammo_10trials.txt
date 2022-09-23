@@ -1,0 +1,73 @@
+Sender: LSF System <lsfadmin@lg03a07>
+Subject: Job 72164784: <mammoclass> in cluster <chimera> Done
+
+Job <mammoclass> was submitted from host <li03c04> by user <vanvok01> in cluster <chimera> at Thu Sep 22 20:37:07 2022
+Job was executed on host(s) <lg03a07>, in queue <gpu>, as user <vanvok01> in cluster <chimera> at Thu Sep 22 20:37:22 2022
+</hpc/users/vanvok01> was used as the home directory.
+</hpc/users/vanvok01> was used as the working directory.
+Started at Thu Sep 22 20:37:22 2022
+Terminated at Thu Sep 22 23:08:17 2022
+Results reported at Thu Sep 22 23:08:17 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J mammoclass
+#BSUB -P acc_shenl03_ml
+#BSUB -q gpu
+#BSUB -n 1
+#BSUB -R rusage[mem=8000]
+#BSUB -W 05:00
+#BSUB -o %J.stdout
+#BSUB -eo %J.stderr
+
+ml python
+python mammo_class_withtune.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   8291.00 sec.
+    Max Memory :                                 2548 MB
+    Average Memory :                             2451.93 MB
+    Total Requested Memory :                     8000.00 MB
+    Delta Memory :                               5452.00 MB
+    Max Swap :                                   2 MB
+    Max Processes :                              7
+    Max Threads :                                19
+    Run time :                                   9055 sec.
+    Turnaround time :                            9070 sec.
+
+The output (if any) follows:
+
+Finished Training
+Finished Training
+Finished Training
+Finished Training
+Finished Training
+Accuracy: 0.45913461538461536
+Best hyperparameters: {'lr': 0.00010523141714050312, 'batch_size': 4}
+Best epoch: {'Epoch': 19}
+      value  params_batch_size  params_lr  user_attrs_Epoch
+0  0.227163                  5   0.000125                19
+1  0.444712                  5   0.038707                19
+2  0.459135                  4   0.000105                19
+3  0.338942                  6   0.000055                19
+4  0.312500                  3   0.000273                19
+5  0.444712                  4   0.063732                 9
+6  0.306490                  4   0.000268                 0
+7  0.112981                  6   0.050437                 0
+8  0.444712                  3   0.001557                 9
+9  0.108173                  6   0.006899                 0
+Accuracy of the network on test images: 46 %
+
+
+PS:
+
+Read file <72164784.stderr> for stderr output of this job.
+
